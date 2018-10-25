@@ -1,33 +1,42 @@
 
 /**
- * Write a description of class GUI here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Created By: Jeremiah Underwood,
+ * Creation Date 10/25/2018)
+ * Last Edited 10/25/2018)
  */
-public class GUI
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class GUI
-     */
-    public GUI()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+//Feel free to add yourself to the list of creators if you modify this
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+import java.awt.*; //Dont delete this!-JU
+/*public class GUI{
+
+}*/
+
+/*
+   This is a basic GUI method, 
+*/
+class GUI extends Frame{
+    
+    //this is the method for a basic GUI object, we will definately change this.
+    GUI(){
+        Label l=new Label("Player1Name");
+        l.setBounds(100,100,100,100);
+        add(l);
+        Label l2=new Label("Player2Name");
+        l2.setBounds(100,200,100,100);
+        add(l2);
+        setSize(1920,1080);
+        setLayout(null);  
+        setVisible(true);
     }
-}
+    
+    //the main function, but I think you already knew that.
+    public static void main(){  
+    GUI G=new GUI();  
+    }
+    
+    //For Drawing a String, this is SUPER incomplete as of now
+    public void drawString(String string){
+        
+    }
+}  

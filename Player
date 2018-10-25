@@ -1,33 +1,36 @@
-
 /**
- * Write a description of class Player here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+*Created by Evan Brown
+*Edited last on 10/25/18
+*Created on BlueJ
+*
+*/
+
 public class Player
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Player
-     */
-    public Player()
-    {
-        // initialise instance variables
-        x = 0;
+    int win;
+    int loss;
+    String name;
+    int age;
+    
+    public Player(String name, int age){
+        this.win = 0;
+        this.loss = 0;
+        this.name = name;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public String returnName(){
+        return this.name;
+    }
+    
+    public int returnWin(){
+        return this.win;
+    }
+    
+    public int returnLoss(){
+        return this.loss;
+    }
+    
+    public int returnGrade(){
+        return this.win/(this.loss + this.win) * 100;
     }
 }

@@ -1,42 +1,46 @@
-
 /**
  * Created By: Jeremiah Underwood,
  * Creation Date 10/25/2018)
  * Last Edited 10/25/2018)
  */
 
-//Feel free to add yourself to the list of creators if you modify this
+//Feel free to add yourself to the list of creators if you modify this - JU
+//Also, if you make comments, putting your initals helps with communication - JU
 
 import java.awt.*; //Dont delete this!-JU
-/*public class GUI{
+/*
+I dont know if this will ever come in handy, but we should keep it for now. -JU
+public class GUI{
 
-}*/
+}
+*/
 
 /*
-   This is a basic GUI method, 
+   This is a basic GUI method,-JU
 */
 class GUI extends Frame{
     
-    //this is the method for a basic GUI object, we will definately change this.
+    //this is the method for a basic GUI object, we will definately change this.-JU
     GUI(){
-        Label l=new Label("Player1Name");
-        l.setBounds(100,100,100,100);
-        add(l);
-        Label l2=new Label("Player2Name");
-        l2.setBounds(100,200,100,100);
-        add(l2);
+        //Label l=new Label("Player1Name");
+        //l.setBounds(100,100,100,100);
+        //add(l);
+                                           //This is for reference-JU
+        add(drawString("hi"));
         setSize(1920,1080);
         setLayout(null);  
         setVisible(true);
     }
     
-    //the main function, but I think you already knew that.
+    //the main function, but I think you already knew that.-JU
     public static void main(){  
     GUI G=new GUI();  
     }
     
-    //For Drawing a String, this is SUPER incomplete as of now
-    public void drawString(String string){
-        
+    //For Drawing a string, I'm not super far as of now.-JU
+    public Label drawString(String string){
+        Label l = new Label(string);
+        l.setBounds(100, 100, 100, 100);
+        return l;
     }
-}  
+}

@@ -32,6 +32,7 @@ public class Player
     
     public int returnGrade(){
         return this.win/(this.loss + this.win) * 100;
+        }
         
          public void addWin(){
         this.win += 1;

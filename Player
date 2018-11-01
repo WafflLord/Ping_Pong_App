@@ -1,6 +1,6 @@
 /**
 *Created by Evan Brown
-*Edited last on 10/25/18
+*Edited last on 11/1/18
 *Created on BlueJ
 *
 */
@@ -11,10 +11,16 @@ public class Player
     int loss;
     String name;
     int age;
+    int score;
+    int hits;
+    int misses;
     
     public Player(String name, int age){
         this.win = 0;
         this.loss = 0;
+        this.score = 0;
+        this.hits = 0;
+        this.misses = 0;
         this.name = name;
     }
     
@@ -40,5 +46,33 @@ public class Player
     
     public void addLoss(){
         this.loss += 1;
+    }
+    
+    public int returnScores(){
+        return this.score;
+    }
+    
+    public void addScores(int scores){
+        this.score += scores;
+    }
+    
+    public int returnHits(){
+        return this.hits;
+    }
+        
+    public int returnMisses(){
+        return this.misses;
+    }
+    
+    public int returnHitsToMiss(){
+        return this.hits/(this.misses + this.hits) * 100;
+    }
+    
+    public void addHits(int scores){
+        this.hits += scores;
+    }
+    
+    public void addMisses(int scores){
+        this.misses += scores;
     }
 }

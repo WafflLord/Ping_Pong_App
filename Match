@@ -1,7 +1,7 @@
 
 /**
  * Created by Evan Brown
- *Edited last on 11/1/18
+ * Edited last on 11/1/18
  * Created on BlueJ
  * 
  */
@@ -9,6 +9,9 @@ public class Match
 {
 
     protected Player[] Players;
+        
+    int WinningScores = 0;
+    int LosingScores = 0;
     
     public Match(Player[] Players)
     {
@@ -26,8 +29,14 @@ public class Match
         for(int i = 0; i < Winners.length; i++){
             Player Winner = Winners[i];
             Winner.addWin();
+            Winner.addScores(WinningScores);
+            Winner.addHits(WinningScores);
+            Winner.addMisses(LosingScores);
             Player Loser = Losers[i];
             Loser.addLoss();
+            Loser.addScores(LosingScores);
+            Loser.addHits(LosingScores);
+            Loser.addMisses(WinningScores);
         }
     }
 }

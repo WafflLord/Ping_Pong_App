@@ -8,7 +8,7 @@
 public class Match
 {
 
-    private Player[] Players;
+    protected Player[] Players;
     
     public Match(Player[] Players)
     {
@@ -22,7 +22,7 @@ public class Match
         }
         return names;
     }
-    public void DefineMatch(Player[] Winners,Player[] Losers){
+    public static void DefineMatch(Player[] Winners,Player[] Losers){
         for(int i = 0; i < Winners.length; i++){
             Player Winner = Winners[i];
             Winner.addWin();

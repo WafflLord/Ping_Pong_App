@@ -1,33 +1,21 @@
 
 /**
- * Write a description of class Rankings here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Created by Diego Alcocer
+ * Creation Date: 11/1/2018
  */
-public class Rankings
+public class Singles extends Match
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Rankings
-     */
-    public Rankings()
+    static Player PlayerOne; 
+    static Player PlayerTwo;
+    public Singles(Player[] Players)
     {
-        // initialise instance variables
-        x = 0;
+        super(Players);
+        this.PlayerOne = this.Players[0];
+        this.PlayerTwo = this.Players[1];
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void DefineSinglesMatch(Player SinglesWinner,Player SinglesLoser){
+        Player[] Winner = {SinglesWinner};
+        Player[] Loser = {SinglesLoser};
+        DefineMatch(Winner,Loser);
     }
 }

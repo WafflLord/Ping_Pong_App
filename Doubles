@@ -1,33 +1,24 @@
-
 /**
- * Write a description of class Rankings here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Rankings
-{
-    // instance variables - replace the example below with your own
-    private int x;
+*  created by David Vasso
+* last edited on ///
+*created on BlueJ
+*
+**/
 
-    /**
-     * Constructor for objects of class Rankings
-     */
-    public Rankings()
-    {
-        // initialise instance variables
-        x = 0;
+public class Doubles extends Match{
+    Player RedPlayerOne;
+    Player RedPlayerTwo;
+    Player BluePlayerOne;
+    Player BluePlayerTwo;
+    public Doubles(Player[] Players){
+        super(Players);
+        this.RedPlayerOne = this.Players[0];
+        this.RedPlayerTwo = this.Players[1];
+        this.BluePlayerOne = this.Players[2];
+        this.BluePlayerTwo = this.Players[3];
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public void DefineDoubleMatch(Player[] Winners, Player[] Losers)
     {
-        // put your code here
-        return x + y;
+        this.DefineMatch(Winners,Losers);
     }
 }

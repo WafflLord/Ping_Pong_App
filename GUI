@@ -1,46 +1,41 @@
 /**
  * Created By: Jeremiah Underwood,
  * Creation Date 10/25/2018)
- * Last Edited 10/25/2018)
+ * Last Edited 11/15/2018)
  */
 
-//Feel free to add yourself to the list of creators if you modify this - JU
-//Also, if you make comments, putting your initals helps with communication - JU
+//Feel free to add yourself to the list of creators if you modify this
 
-import java.awt.*; //Dont delete this!-JU
-/*
-I dont know if this will ever come in handy, but we should keep it for now. -JU
-public class GUI{
+import java.awt.*;
 
-}
-*/
-
-/*
-   This is a basic GUI method,-JU
-*/
 class GUI extends Frame{
-    
-    //this is the method for a basic GUI object, we will definately change this.-JU
-    GUI(){
-        //Label l=new Label("Player1Name");
-        //l.setBounds(100,100,100,100);
-        //add(l);
-                                           //This is for reference-JU
-        add(drawString("hi"));
-        setSize(1920,1080);
+    int width;
+    int height;
+    //This is the basic screen creation object.
+    GUI(int width, int height){
+        this.width = width;
+        this.height = height;
+        setSize(width,height);
+        drawStringMiddleWidth("The Winner Is:",50,50);
+        drawStringMiddleWidth("that Guy steven gearog",100,10);
         setLayout(null);  
         setVisible(true);
     }
-    
-    //the main function, but I think you already knew that.-JU
+    //the main function, but I think you already knew that.
     public static void main(){  
-    GUI G=new GUI();  
+        GUI G=new GUI(1920,1080);
     }
     
-    //For Drawing a string, I'm not super far as of now.-JU
-    public Label drawString(String string){
+    //For Drawing a String, this is SUPER incomplete as of now
+    public void drawString(String string, int[] position,int fontSize){
         Label l = new Label(string);
-        l.setBounds(100, 100, 100, 100);
-        return l;
+        l.setBounds(position[0],position[1],fontSize*string.length(),fontSize);
+        l.setFont(new Font("TimesRoman",Font.PLAIN,fontSize));
+        add(l);
+    }
+    
+    public void drawStringMiddleWidth(String string,int height, int fontSize){
+        int[] position = {(this.width/2 - (string.length()/2)*fontSize/2),height};
+        drawString(string,position,fontSize);
     }
 }

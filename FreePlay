@@ -1,33 +1,27 @@
-
 /**
- * Write a description of class Rankings here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Created by Evan Brown
+ * Edited last 11/15/18
+ * Created in BlueJ
+ * 
  */
-public class Rankings
+public class FreePlay
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Rankings
-     */
-    public Rankings()
+    Player[] players;
+    Player redPlayer;
+    Player bluePlayer;
+    public FreePlay()
     {
-        // initialise instance variables
-        x = 0;
+        Club clubMembers = new Club();
+        this.players = clubMembers.getRandomPlayers(2);
+        this.redPlayer = this.players[0];
+        this.bluePlayer = this.players[1];
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public String[] getPlayers(){
+        String[] names = new String[players.length];
+        for(int i = 0; i < players.length; i++){
+            names[i] = this.players[i].returnName();
+        }
+        return names;
     }
 }

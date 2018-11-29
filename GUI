@@ -22,14 +22,7 @@ class GUI extends Frame{
     
     //this is the method for a basic GUI object, we will definately change this.-JU
     GUI(){
-        //Label l=new Label("Player1Name");
-        //l.setBounds(100,100,100,100);
-        //add(l);
-                                           //This is for reference-JU
-        add(drawString("hi"));
-        setSize(1920,1080);
-        setLayout(null);  
-        setVisible(true);
+
     }
     
     //the main function, but I think you already knew that.-JU
